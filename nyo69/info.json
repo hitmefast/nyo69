@@ -108,6 +108,10 @@
         }
     }
 	"rgb_matrix": {
+		"max_brightness": 120,
+        "sat_steps": 8,
+        "speed_steps": 10,
+        "val_steps": 8,
         "animations": {
             "alphas_mods": true,
             "band_pinwheel_sat": true,
@@ -200,10 +204,6 @@
             {"x": 104, "y": 144, "flags": 4},
             {"matrix": [5, 5], "x": 121, "y": 173, "flags": 4},
             {"matrix": [4, 6], "x": 167, "y": 173, "flags": 4}
-        ],
-        "max_brightness": 120,
-        "sat_steps": 8,
-        "speed_steps": 10,
-        "val_steps": 8
-    },
+        ]
+    }
 }
