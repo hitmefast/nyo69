@@ -14,11 +14,9 @@
     "features": {
         "bootmagic": true,
         "command": false,
-        "console": false,
         "extrakey": true,
         "mousekey": true,
         "nkro": true,
-		"rgb_matrix": true,
     },
     "matrix_pins": {
 		// 9,10,11,20,22,28,29,30,31,32,36,37,38,40,41 physical pins
@@ -109,11 +107,6 @@
         }
     }
 	"rgb_matrix": {
-		"max_brightness": 120,
-        "sat_steps": 8,
-		"val_steps": 8,
-        "speed_steps": 10,
-
         "animations": {
             "alphas_mods": true,
             "band_pinwheel_sat": true,
@@ -160,7 +153,6 @@
             "typing_heatmap": true
         },
         "center_point": [112, 112],
-        "driver": "ws2812",
         "layout": [
             {"matrix": [0, 1], "x": 32, "y": 45, "flags": 4},
             {"matrix": [0, 2], "x": 57, "y": 40, "flags": 4},
