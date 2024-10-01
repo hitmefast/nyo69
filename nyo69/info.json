@@ -2,12 +2,12 @@
     "manufacturer": "hitmefast",
     "keyboard_name": "nyo69",
     "maintainer": "hitmefast",
-	"url": "",
+	"url": "https://github.com/hitmefast/nyo69",
     "bootloader": "atmel-dfu",
     "diode_direction": "COL2ROW",
 	"processor": "atmega32u4",
     "usb": {
-        "device_version": "1.0",
+        "device_version": "1.0.0",
         "pid": "0x0000",
         "vid": "0xFEED"
     },
@@ -29,6 +29,7 @@
     },
 	"layout_aliases": {
         "LAYOUT_iso": "LAYOUT_69_iso"
+	},
     "layouts": {
         "LAYOUT_69_iso": {
             "layout": [
@@ -110,8 +111,9 @@
 	"rgb_matrix": {
 		"max_brightness": 120,
         "sat_steps": 8,
+		"val_steps": 8,
         "speed_steps": 10,
-        "val_steps": 8,
+
         "animations": {
             "alphas_mods": true,
             "band_pinwheel_sat": true,
