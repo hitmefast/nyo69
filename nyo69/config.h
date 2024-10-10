@@ -1,17 +1,13 @@
-// Copyright 2024 hitmefast (@hitmefast)
-// SPDX-License-Identifier: GPL-2.0-or-later
+//Copyright 2024 hitmefast (@hitmefast)
+//SPDX-License-Identifier: GPL-2.0-or-later
 
 #pragma once
 
-// Features that can be disabled, these useful options can be disabled to reduce on code size.
+//Features that can be disabled, these useful options can be disabled to reduce on code size.
+//#define NO_DEBUG	//disable debug print
+//#define NO_PRINT	//disable print
 
-// disable debug print
-//#define NO_DEBUG
-
-// Disable print
-//#define NO_PRINT
-
-// Disable action features
+//Disable action features
 //#define NO_ACTION_LAYER
 //#define NO_ACTION_TAPPING
 //#define NO_ACTION_ONESHOT
@@ -20,7 +16,7 @@
 #define WS2812_DI_PIN D1	//pin of data of LEDs
 #define RGB_MATRIX_LED_COUNT 76	//number of LEDs connected
 
-#define RGB_MATRIX_SLEEP true	//RBG Light turns off when PC sleeps, //old commnand #define RGB_DISABLE_WHEN_USB_SUSPENDED true	//turn off effects when suspended
+#define RGB_MATRIX_SLEEP true	//RBG Light turns off when PC sleeps
 #define RGB_MATRIX_LAYERS true	//activates LEDs when caps or others are activated
 #define RGB_MATRIX_TIMEOUT 0	//miliseconds to wait until rbg turns off
 
@@ -31,6 +27,3 @@
 #define RGB_MATRIX_SPD_STEP 10	//defines the speed of the animations
 
 #define RGB_MATRIX_LED_FLUSH_LIMIT 16	//limits in ms the freq of the LEDs
-
-// LED Index to Flag
-//#define LED_FLAG_UNDERGLOW {LDS1, LDS2, LDS3, LDS4, LDS5, LDS6, LDS7, LDS8}
