@@ -67,39 +67,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Specific light effects on modifiers, from RGBLIGHT -> trying to RGBMATRIX
 
 bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
-    HSV hsv = {0, 255, 255};
-
-    if (layer_state_is(layer_state, 2)) {
-        hsv = (HSV){130, 255, 255};
-    } else {
-        hsv = (HSV){30, 255, 255};
+    if (host_keyboard_led_state().caps_lock) {
+		rgb_matrix_set_color(30, RGB_RED);
+	}
+	if (layer_state_is(layer_state, 1)) {
+		rgb_matrix_set_color(64, RGB_CYAN);
     }
-
-    if (hsv.v > rgb_matrix_get_val()) {
-        hsv.v = rgb_matrix_get_val();
-    }
-    RGB rgb = hsv_to_rgb(hsv);
-
-    for (uint8_t i = led_min; i < led_max; i++) {
-        if (HAS_FLAGS(g_led_config.flags[i], 0x01)) { // 0x01 == LED_FLAG_MODIFIER
-            rgb_matrix_set_color(i, rgb.r, rgb.g, rgb.b);
-        }
+	if (layer_state_is(layer_state, 2)) {
+		rgb_matrix_set_color(64, RGB_PURPLE);
+		rgb_matrix_set_color(56, RGB_PURPLE);
     }
     return false;
 }
 
-// Light LEDs 30 red when caps lock is active.
-const rgblight_segment_t PROGMEM my_capslock_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {30, 1, HSV_RED},       // Light 1 LEDs in Caps
-);
-// Light LEDs 64 in cyan when keyboard layer 1 is active
-const rgblight_segment_t PROGMEM my_layer1_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {64, 1, HSV_CYAN}       // Light 1 LEDs in Fn0
-);
-// Light LEDs 64 & 56 in purple when keyboard layer 2 is active
-const rgblight_segment_t PROGMEM my_layer2_layer[] = RGBLIGHT_LAYER_SEGMENTS(
-    {64, 1, HSV_PURPLE}     // Light 1 LEDs in Fn1
-	{56, 1, HSV_PURPLE}     // Light 1 LEDs in Fn1
-);
-
 */
+
+bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
+    if (host_keyboard_led_state().caps_lock) {
+		//set color red for caps
+		rgb_matrix_set_color(30, RGB_RED);
+	}
+	switch(get_highest_layer(layer_state|default_layer_state)) {
+		case 1:
+			//set color cyan for layer 1
+			rgb_matrix_set_color(64, RGB_CYAN);
+			break;
+		case 2:
+			//set color purple for layer 2
+			rgb_matrix_set_color(64, RGB_PURPLE);
+			rgb_matrix_set_color(56, RGB_PURPLE);
+			break;
+    }
+    return false;
+}
