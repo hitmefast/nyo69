@@ -2,7 +2,7 @@
 
 ![nyo69](imgur.com image replace me!)
 
-*A full mix of ISO and ANSI that prioritizes all the comfort and style from both. In a small factor of 60% that fits in the most common production lines od TADA68/KD68 with reviewed and renewed specs*
+*A full mix of ISO and ANSI that prioritizes all the comfort and style from both. In a small factor of 60% that fits in the most common production lines of TADA68/KD68 with reviewed and renewed specs*
 
 * Keyboard Maintainer: [hitmefast](https://github.com/hitmefast)
 * Hardware Supported: *The PCBs, controllers supported*
