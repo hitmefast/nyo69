@@ -2,11 +2,11 @@
 
 ![nyo69](imgur.com image replace me!)
 
-*A short description of the keyboard/project*
+*A full mix of ISO and ANSI that prioritizes all the comfort and style from both. In a small factor of 60% that fits in the most common production lines od TADA68/KD68 with reviewed and renewed specs*
 
 * Keyboard Maintainer: [hitmefast](https://github.com/hitmefast)
 * Hardware Supported: *The PCBs, controllers supported*
-* Hardware Availability: *Links to where you can find this hardware*
+* Hardware Availability: *At this point in time production is directly private, future options could be possible*
 
 Make example for this keyboard (after setting up your build environment):
 
